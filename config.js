@@ -10,7 +10,15 @@ const expressSession = require('express-session');
 
 app.use(helmet());
 app.use(bodyParser.json());
-app.use(expressSession());
+app.use(expressSession({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true
+    }
+}));
 app.get('/example', function(req, res) {
     res.end(`I'm in danger!`);
 });
