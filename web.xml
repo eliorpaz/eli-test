@@ -1,0 +1,9 @@
+<!-- web.xml -->
+<security-constraint>
+    <!-- Vulnerable: Overly permissive security settings -->
+    <web-resource-collection>
+        <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <!-- Missing auth-constraint -->
+    <!-- Missing user-data-constraint -->
+</security-constraint>
