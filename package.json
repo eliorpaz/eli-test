@@ -18,6 +18,6 @@
     "helmet": "^3.23.3",
     "libxmljs": "^0.19.7",
     "node-serialize": "0.0.4",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "6.0.1"
   }
 }
